@@ -15,8 +15,14 @@ import Bug from './bug';
         expect(bug).to.have.property('status');
       });
 
-      it('should should be normal by default', function() {
+      it('should be normal by default', function() {
         expect(bug.status).to.equal('normal');
+      });
+
+      it('should be mean after I swat it', function() {
+        expect(bug.status).to.equal('normal');
+        bug.swat();
+        expect(bug.status).to.equal('mean');
       });
 
 
